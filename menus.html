@@ -19,22 +19,36 @@
         <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
+    <header>
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="La Luire Events Logo">
-                
+                    <img src="assets/LOGO.png" alt="La Luire Logo">
                 </a>
+                
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="work.html">Our Work</a></li>
-                    <li><a href="menus.html" class="active">Menus</a></li>
+                    <li class="dropdown">
+                        <a href="work.html">Our Work <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="work.html#gallery">Gallery</a></li>
+                            <li><a href="work.html#events">Events</a></li>
+                            <li><a href="work.html#testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="menus.html">Menus <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="menus.html#wedding">Wedding</a></li>
+                            <li><a href="menus.html#corporate">Corporate</a></li>
+                            <li><a href="menus.html#private">Private</a></li>
+                        </ul>
+                    </li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -128,14 +142,14 @@
                             <h4>Chocolate Fondant</h4>
                             <p>With salted caramel center and vanilla bean ice cream</p>
                         </div>
-                        <div class="menu-item-price">£9</div>
+                     
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-name">
                             <h4>Lemon Tart</h4>
                             <p>With raspberry coulis and crème fraîche</p>
                         </div>
-                        <div class="menu-item-price">£8</div>
+                     
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-name">
@@ -351,19 +365,21 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer>
+   <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>La Luire Events</h3>
+                    <h3>La Luire</h3>
                     <p>Transforming ordinary events into extraordinary experiences through the art of gastronomy.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="footer-social">
+                        <a href="https://wa.me/4477765788658" ><i class="fab fa-whatsapp"></i></a>
+                       <a href=" https://www.yell.com/biz/la-luire-ltd-london-10762550" target="_blank">
+                     <img class="yellLogo" src="assets/yell-logo.png" alt="Yell Logo" style="height: 24px;">
+                      </a>
+                         <a href="https://www.linkedin.com/in/pia-k-45924b6a"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -375,30 +391,36 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="services.html#weddings">Wedding Catering</a></li>
-                        <li><a href="services.html#corporate">Corporate Events</a></li>
-                        <li><a href="services.html#private">Private Dining</a></li>
+                        <li><a href="services.html#wedding">Wedding Catering</a></li>
+                        <li><a href="services.html#corporate">Corporate Catering</a></li>
+                        <li><a href="services.html#private">Private Events</a></li>
                         <li><a href="services.html#canapes">Canapé Receptions</a></li>
-                        <li><a href="services.html#buffets">Gourmet Buffets</a></li>
-                        <li><a href="services.html#equipment">Equipment Rental</a></li>
+                        <li><a href="services.html#bbq">BBQ Catering</a></li>
+                        <li><a href="services.html#buffet">Buffet Service</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> LA LUIRE@MAIL.COM</p>
-                    <p><i class="fas fa-phone"></i> +44 123 456 7890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> London, United Kingdom</p>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i>02080583318 </li>
+                        <li><i class="fas fa-envelope"></i> laluire@mail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> London, United Kingdom</li>
+                        <li>Company Reg: 13929211</li>
+                        <li>VAT No: 457034593GB</li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2023 La Luire Events. All Rights Reserved.</p>
+                <p>&copy; 2023 La Luire Catering. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
 </body>
 </html>

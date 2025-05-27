@@ -586,7 +586,13 @@ footer {
     color: white;
     padding: 80px 0 20px;
 }
-
+.footer-social img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 24px;
+  width: auto;
+  margin: 0 5px;
+}
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -601,7 +607,11 @@ footer {
     position: relative;
     padding-bottom: 10px;
 }
-
+.yellLogo{
+     filter: brightness(0) invert(1); /* Turns logo white */
+  opacity: 0.9; /* Slightly transparent for better blending */
+  transition: opacity 0.3s ease;
+}
 .footer-col h3::after {
     content: '';
     position: absolute;
@@ -815,7 +825,68 @@ footer {
 .value-icon {
     margin-bottom: 20px;
 }
+.clients-section {
+    overflow: hidden;
+    padding: 60px 0;
+}
 
+.clients-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+}
+
+.clients-carousel {
+    display: flex;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+    padding: 20px 0;
+}
+
+.clients-carousel:hover {
+    animation-play-state: paused;
+}
+
+.client-logo {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 80px;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.client-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.client-logo:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .client-logo {
+        width: 120px;
+        margin: 0 20px;
+    }
+}
 .value-icon i {
     font-size: 2.5rem;
     color: var(--secondary-color);

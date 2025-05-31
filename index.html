@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preload" href="assets/heropage.png" as="image">
     <link rel="preload" href="assets/2.png" as="image">
-    <link rel="preload" href="assets/5.1 A.jpg" as="image">
+    <link rel="preload" href="assets/5A.jpg" as="image">
     <link rel="preload" href="assets/4.png" as="image">
 </head>
 <body>
@@ -55,7 +55,7 @@
        <div class="hero-slideshow">
     <div class="hero-slide active" style="background-image: url('assets/heropage.png');"></div>
     <div class="hero-slide" style="background-image: url('assets/2.png');"></div>
-    <div class="hero-slide" style="background-image: url('assets/5.1\ A.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('assets/5A.jpg');"></div>
     <div class="hero-slide" style="background-image: url('assets/4.png');"></div>
 
         <div class="hero-content">
@@ -275,6 +275,40 @@
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="main.js">
+        const heroSlideshow = () => {
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        if (slides.length === 0) return;
+
+        slides[0].classList.add('active');
+        if (dots.length > 0) dots[0].classList.add('active');
+
+        const showSlide = (n) => {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        };
+
+        let slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+
+        if (dots.length > 0) {
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(index);
+                    slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+                });
+            });
+        }
+    };
+
+    heroSlideshow();
+    </script>
 </body>
 </html>

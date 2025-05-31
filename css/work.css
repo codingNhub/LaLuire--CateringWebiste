@@ -11,7 +11,9 @@
     gap: 10px;
     margin-top: 30px;
 }
-
+#corporate{
+    background-color:#f9f6f1 ;
+}
 .category-tab {
     padding: 12px 25px;
     background-color: white;

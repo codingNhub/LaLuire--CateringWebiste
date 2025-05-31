@@ -9,33 +9,19 @@
     margin-top: 80px;
 }
 
-.page-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    color: white;
-    animation: fadeInDown 1s ease;
+.section {
+    padding: 5rem 0;
 }
 
-.breadcrumb {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 1.1rem;
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.breadcrumb a {
-    color: var(--secondary-color);
-    transition: var(--transition);
-}
-
-.breadcrumb a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    margin: 0 10px;
-    color: rgba(255, 255, 255, 0.7);
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
 }
 
 /* Menu Tabs */
@@ -101,43 +87,37 @@
     align-items: center;
 }
 
-.menu-item:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
-}
-
-.menu-item-name h4 {
-    margin-bottom: 8px;
-    color: var(--dark-color);
-    font-size: 1.1rem;
-}
-
-.menu-item-name p {
-    font-size: 0.95rem;
-    color: var(--text-color);
-    font-style: italic;
-}
-
-.menu-item-price {
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    min-width: 80px;
-    text-align: right;
-}
-
-
-/* Responsive Styles */
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
-    .page-header {
-        height: 300px;
-        margin-top: 70px;
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 80px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        transition: 0.3s;
+        z-index: 999;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
     
-    .page-header h1 {
-        font-size: 2.5rem;
+    .nav-links.active {
+        left: 0;
     }
     
+    .nav-links li {
+        margin: 1rem 0;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
     .menu-tabs {
         justify-content: flex-start;
         overflow-x: auto;
@@ -154,23 +134,19 @@
         flex-direction: column;
         align-items: flex-start;
     }
-    
-    .menu-item-price {
-        margin-top: 10px;
-        text-align: left;
-    }
 }
 
 @media (max-width: 576px) {
-    .page-header h1 {
-        font-size: 2rem;
+    .page-header {
+        height: 300px;
     }
     
     .menu-category {
         padding: 20px;
     }
-    
-    .cta h2 {
-        font-size: 2rem;
-    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

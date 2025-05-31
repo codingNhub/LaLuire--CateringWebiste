@@ -10,45 +10,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-     <header>
+     <header id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
                     <img src="assets/LOGO.png" alt="La Luire Logo">
                 </a>
-                
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="work.html">Our Work <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="work.html#gallery">Gallery</a></li>
-                            <li><a href="work.html#events">Events</a></li>
-                            <li><a href="work.html#testimonials">Testimonials</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="menus.html">Menus <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="menus.html#wedding">Wedding</a></li>
-                            <li><a href="menus.html#corporate">Corporate</a></li>
-                            <li><a href="menus.html#private">Private</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="work.html">Our Work</a></li>
+                    <li><a href="menus.html">Menus</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
         </div>
     </header>
- <!-- Social Media Buttons -->
+    
+    <!-- Social Media Buttons -->
     <div class="social-buttons">
-        <a href="https://wa.me/4477765788658" class="social-button whatsapp" target="_blank">
+        <a href="https://wa.me/+447765788658" class="social-button whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="mailto:laluire@mail.com" class="social-button email">
@@ -58,6 +43,7 @@
             <i class="fas fa-phone"></i>
         </a>
     </div>
+
     <!-- Services Section -->
     <section class="section">
         <div class="container">
@@ -76,11 +62,12 @@
                         <h3>Wedding Catering</h3>
                         <p>Create your dream wedding with our bespoke catering services. From intimate gatherings to grand receptions, we'll craft a menu that reflects your love story.</p>
                         <ul>
-                            <li>Custom wedding menu design</li>
-                            <li>Complimentary tasting sessions</li>
-                            <li>Full table service or buffet options</li>
-                            <li>Wedding cake coordination</li>
-                            <li>Bar and beverage packages</li>
+                            <li><i class="fas fa-check-circle"></i> Custom wedding menu design</li>
+                            <li><i class="fas fa-check-circle"></i> Complimentary tasting sessions</li>
+                            <li><i class="fas fa-check-circle"></i> Full table service or buffet options</li>
+                            <li><i class="fas fa-check-circle"></i> Wedding cake coordination</li>
+                            <li><i class="fas fa-check-circle"></i> Beverage packages</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>New:</strong> Nespresso Bar</li>
                         </ul>
                         <a href="contact.html" class="btn">Plan Your Wedding</a>
                     </div>
@@ -89,17 +76,18 @@
                 <!-- Corporate Events -->
                 <div class="service-card" id="corporate">
                     <div class="service-img">
-                        <img src="assets/copratedevent.png" alt="Professional Corporate Catering">
+                        <img src="assets/2.jpg" alt="Professional Corporate Catering">
                     </div>
                     <div class="service-content">
                         <h3>Corporate Events</h3>
                         <p>Impress clients and colleagues with our professional corporate catering services designed for business occasions of all sizes.</p>
                         <ul>
-                            <li>Breakfast meetings and working lunches</li>
-                            <li>Conference and seminar catering</li>
-                            <li>Product launch receptions</li>
-                            <li>Awards dinners and gala events</li>
-                            <li>Team building catering</li>
+                            <li><i class="fas fa-check-circle"></i> Breakfast meetings and working lunches</li>
+                            <li><i class="fas fa-check-circle"></i> Conference and seminar catering</li>
+                            <li><i class="fas fa-check-circle"></i> Product launch receptions</li>
+                            <li><i class="fas fa-check-circle"></i> Awards dinners and gala events</li>
+                            <li><i class="fas fa-check-circle"></i> Team building catering</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>New:</strong> Nespresso Bar</li>
                         </ul>
                         <a href="contact.html" class="btn">Enquire About Corporate</a>
                     </div>
@@ -108,17 +96,17 @@
                 <!-- Private Dining -->
                 <div class="service-card" id="private">
                     <div class="service-img">
-                        <img src="assets/picniparty.png" alt="Intimate Private Dining">
+                        <img src="assets/3.jpg" alt="Intimate Private Dining">
                     </div>
                     <div class="service-content">
                         <h3>Private Dining</h3>
                         <p>Elevate your special occasions with restaurant-quality dining in the comfort of your home or chosen venue.</p>
                         <ul>
-                            <li>Anniversary celebrations</li>
-                            <li>Birthday parties</li>
-                            <li>Dinner parties</li>
-                            <li>Family gatherings</li>
-                            <li>Intimate wedding receptions</li>
+                            <li><i class="fas fa-check-circle"></i> Anniversary celebrations</li>
+                            <li><i class="fas fa-check-circle"></i> Birthday parties</li>
+                            <li><i class="fas fa-check-circle"></i> Dinner parties</li>
+                            <li><i class="fas fa-check-circle"></i> Family gatherings</li>
+                            <li><i class="fas fa-check-circle"></i> Intimate wedding receptions</li>
                         </ul>
                         <a href="contact.html" class="btn">Book Private Dining</a>
                     </div>
@@ -127,17 +115,18 @@
                 <!-- Canapé Receptions -->
                 <div class="service-card" id="canapes">
                     <div class="service-img">
-                        <img src="assets/beautifull venue.png" alt="Elegant Canapé Selection">
+                        <img src="assets/4.jpg" alt="Elegant Canapé Selection">
                     </div>
                     <div class="service-content">
                         <h3>Canapé Receptions</h3>
                         <p>Perfect for cocktail parties and networking events, our canapés are miniature works of culinary art.</p>
                         <ul>
-                            <li>50+ canapé varieties available</li>
-                            <li>Seasonal and themed selections</li>
-                            <li>Passed or stationed service</li>
-                            <li>Vegetarian, vegan and gluten-free options</li>
-                            <li>Paired drink suggestions</li>
+                            <li><i class="fas fa-check-circle"></i> 20+ canapé varieties available</li>
+                            <li><i class="fas fa-check-circle"></i> Seasonal and themed selections</li>
+                            <li><i class="fas fa-check-circle"></i> Passed or stationed service</li>
+                            <li><i class="fas fa-check-circle"></i> Vegetarian, vegan and gluten-free options</li>
+                            <li><i class="fas fa-check-circle"></i> Paired drink suggestions</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>New:</strong> Nespresso World Bar</li>
                         </ul>
                         <a href="contact.html" class="btn">Order Canapés</a>
                     </div>
@@ -146,17 +135,18 @@
                 <!-- Gourmet Buffets -->
                 <div class="service-card" id="buffets">
                     <div class="service-img">
-                        <img src="assets/2.1 A (3).jpg" alt="Gourmet Buffet Spread">
+                        <img src="assets/5.jpg" alt="Gourmet Buffet Spread">
                     </div>
                     <div class="service-content">
                         <h3>Gourmet Buffets</h3>
                         <p>Our buffet service combines the informality of self-service with the quality of restaurant-standard cuisine.</p>
                         <ul>
-                            <li>Hot and cold buffet options</li>
-                            <li>International cuisine themes</li>
-                            <li>Chef-attended carving stations</li>
-                            <li>Dietary requirement accommodation</li>
-                            <li>Seasonal and local ingredients</li>
+                            <li><i class="fas fa-check-circle"></i> Hot and cold buffet options</li>
+                            <li><i class="fas fa-check-circle"></i> International cuisine themes</li>
+                            <li><i class="fas fa-check-circle"></i> Chef-attended carving stations</li>
+                            <li><i class="fas fa-check-circle"></i> Dietary requirement accommodation</li>
+                            <li><i class="fas fa-check-circle"></i> Seasonal and local ingredients</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>New:</strong> Nespresso Bar</li>
                         </ul>
                         <a href="contact.html" class="btn">Plan Your Buffet</a>
                     </div>
@@ -165,20 +155,19 @@
                 <!-- Equipment Rental -->
                 <div class="service-card" id="equipment">
                     <div class="service-img">
-                        <img src="assets/5. A.jpg" alt="Catering Equipment Rental">
-                  
+                        <img src="assets/6.jpg" alt="Catering Equipment Rental">
                     </div>
                     <div class="service-content">
                         <h3>Equipment Rental</h3>
                         <p>Complete your event with our premium catering equipment available for rental.</p>
-                        <ul class="equipment-list">
-                            <li>Commercial-grade ovens and griddles</li>
-                            <li>Refrigeration units</li>
-                            <li>Nespresso coffee machines</li>
-                            <li>Chafing dishes and buffet servers</li>
-                            <li>Portable bars and cocktail stations</li>
-                            <li>Tableware and linens</li>
-                            <li>Marquees and outdoor catering equipment</li>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Commercial-grade ovens and griddles</li>
+                            <li><i class="fas fa-check-circle"></i> Refrigeration units</li>
+                            <li><i class="fas fa-check-circle"></i> Nespresso coffee machines</li>
+                            <li><i class="fas fa-check-circle"></i> Chafing dishes and buffet servers</li>
+                            <li><i class="fas fa-check-circle"></i> Portable bars and cocktail stations</li>
+                            <li><i class="fas fa-check-circle"></i> Tableware and linens</li>
+                            <li><i class="fas fa-check-circle"></i> Marquees and outdoor catering equipment</li>
                         </ul>
                         <a href="contact.html" class="btn">Rent Equipment</a>
                     </div>
@@ -197,18 +186,18 @@
     </section>
 
     <!-- Footer -->
-  <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>La Luire</h3>
                     <p>Transforming ordinary events into extraordinary experiences through the art of gastronomy.</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/4477765788658" ><i class="fab fa-whatsapp"></i></a>
-                       <a href=" https://www.yell.com/biz/la-luire-ltd-london-10762550" target="_blank">
-                     <img class="yellLogo" src="assets/yell-logo.png" alt="Yell Logo" style="height: 24px;">
-                      </a>
-                         <a href="https://www.linkedin.com/in/pia-k-45924b6a"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/4477765788658"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.yell.com/biz/la-luire-ltd-london-10762550" target="_blank">
+                            <img class="yellLogo" src="assets/yell-logo.png" alt="Yell Logo">
+                        </a>
+                            <a href="https://www.linkedin.com/in/pia-k-45924b6a"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
@@ -227,29 +216,28 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="services.html#wedding">Wedding Catering</a></li>
+                        <li><a href="services.html#weddings">Wedding Catering</a></li>
                         <li><a href="services.html#corporate">Corporate Catering</a></li>
                         <li><a href="services.html#private">Private Events</a></li>
                         <li><a href="services.html#canapes">Canapé Receptions</a></li>
-                        <li><a href="services.html#bbq">BBQ Catering</a></li>
-                        <li><a href="services.html#buffet">Buffet Service</a></li>
+                        <li><a href="services.html#buffets">Buffet Service</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone"></i>02080583318 </li>
+                        <li><i class="fas fa-phone"></i> 02080583318</li>
                         <li><i class="fas fa-envelope"></i> laluire@mail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> London, United Kingdom</li>
-                        <li>Company Reg: 13929211</li>
-                        <li>VAT No: 457034593GB</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 La Luire Catering. All Rights Reserved.</p>
+                <p>© 2023 La Luire Catering. All Rights Reserved.</p>
+                <p style="font-size: 10px;">Company Reg: 13929211</p>
+                <p style="font-size: 10px;">VAT No: 457034593GB</p>
             </div>
         </div>
     </footer>

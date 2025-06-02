@@ -27,6 +27,7 @@
     margin-bottom: 10px;
 }
 
+
 .category-tab.active, 
 .category-tab:hover {
     background-color: var(--primary-color);

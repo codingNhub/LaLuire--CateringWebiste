@@ -20,32 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Menu Tabs (for menus.html)
-    const menuTabs = document.querySelectorAll('.menu-tab');
-    const menuContents = document.querySelectorAll('.menu-content');
-
-    if (menuTabs.length && menuContents.length) {
-        menuTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                menuTabs.forEach(t => t.classList.remove('active'));
-                menuContents.forEach(c => c.classList.remove('active'));
-
-                tab.classList.add('active');
-                const tabId = tab.getAttribute('data-tab');
-                const content = document.getElementById(tabId);
-                if (content) {
-                    content.classList.add('active');
-                }
-            });
-        });
-
-        // Activate first tab by default
-        if (!document.querySelector('.menu-tab.active')) {
-            menuTabs[0].classList.add('active');
-            menuContents[0].classList.add('active');
-        }
-    }
-
+   
     // Category Tabs (for work.html)
     const categoryTabs = document.querySelectorAll('.category-tab');
     const eventSections = document.querySelectorAll('.event-section');

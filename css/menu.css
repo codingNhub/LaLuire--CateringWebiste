@@ -1,4 +1,4 @@
-/* Menu Page Specific Styles */
+/* 
 .page-header {
     height: 400px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/menu-header.jpg') no-repeat center center/cover;
@@ -24,7 +24,6 @@
     margin-bottom: 1rem;
 }
 
-/* Menu Tabs */
 .menu-tabs {
     display: flex;
     justify-content: center;
@@ -52,7 +51,6 @@
     transform: translateY(-3px);
 }
 
-/* Menu Content */
 .menu-content {
     display: none;
     animation: fadeIn 0.5s ease;
@@ -87,7 +85,6 @@
     align-items: center;
 }
 
-/* Mobile Menu Styles */
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -149,4 +146,4 @@
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
+} */

@@ -29,6 +29,189 @@
     box-sizing: border-box;
 }
 
+**Changes**:
+- **HTML Structure**:
+  - Renamed `.about-story` to `.our-story` to match the provided code.
+  - Wrapped text and slider in `.story-content` with a grid layout.
+  - Moved `<h2>` to `.section-title` for consistent styling with other sections.
+  - Corrected the number of `.dot` elements to two, matching the two slides.
+  - Added navigation buttons (`.slider-prev`, `.slider-next`) to match the hero slider’s functionality.
+  - Kept image `onerror` handlers for debugging.
+- **JavaScript**:
+  - Adapted the hero slider’s logic for `.story-slide` and `.slider-dots .dot`.
+  - Used opacity transitions for smooth fading.
+  - Included navigation buttons and hover-to-pause functionality.
+  - Added error handling for missing slides, buttons, or slider container.
+  - Set a 5-second interval to match the hero slider.
+
+#### Updated CSS (`css/style.css`)
+This CSS styles the grid layout and slider, ensuring the text is on the left, the slider on the right, and the heading centered at the top. It should be merged with the existing `style.css` (from artifact_version_id="aaa71a88-9661-42e4-85a5-9082d9848227"), replacing the `.about-story` and `.about-slideshow` sections.
+
+```css
+/* Our Story Section */
+.our-story {
+    padding: var(--section-padding);
+    background-color: var(--light-color);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: -30rem;
+    color: var(--text-color);
+}
+
+.story-text p {
+    margin-bottom: 25px;
+}
+html, body {
+    overflow-x: hidden; /* Hide unwanted horizontal scroll */
+}
+
+.story-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    height: 1250px;
+}
+
+.story-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures image fills without distortion */
+    display: block;
+}
+
+@media (max-width: 1024px) {
+  .story-image {
+    height: auto;
+  }
+
+  .story-image img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.story-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-color: #f0f0f0; /* Fallback for broken images */
+}
+
+.story-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Match hero slider */
+    z-index: 1;
+}
+
+.story-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.story-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider Navigation Buttons */
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+}
+
+.slider-prev:hover, .slider-next:hover {
+    background-color: var(--primary-color);
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+    background-color: var(--secondary-color);
+}
+
+.slider-dots .dot:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .story-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-image {
+        height: 300px;
+    }
+    .slider-prev, .slider-next {
+        padding: 8px;
+        font-size: 1rem;
+    }
+    .slider-dots .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
 body {
     font-family: 'Lora', serif;
     line-height: 1.6;

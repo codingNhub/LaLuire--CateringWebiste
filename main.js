@@ -19,7 +19,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+// main.js
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.about-slide');
+    let currentSlide = 0;
 
+    // Initialize first slide
+    if (slides.length > 0) {
+        slides[currentSlide].classList.add('active');
+    }
+
+    // Function to switch slides
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        slides[currentSlide].style.left = '-100%'; // Slide out to the left
+
+        currentSlide = (currentSlide + 1) % slides.length; // Loop back to first slide
+
+        slides[currentSlide].classList.add('active');
+        slides[currentSlide].style.left = '0'; // Slide in from the right
+    }
+
+    // Set interval for automatic sliding every 1 second
+    setInterval(nextSlide, 1000);
+});
    
     // Category Tabs (for work.html)
     const categoryTabs = document.querySelectorAll('.category-tab');

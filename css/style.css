@@ -28,26 +28,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-**Changes**:
-- **HTML Structure**:
-  - Renamed `.about-story` to `.our-story` to match the provided code.
-  - Wrapped text and slider in `.story-content` with a grid layout.
-  - Moved `<h2>` to `.section-title` for consistent styling with other sections.
-  - Corrected the number of `.dot` elements to two, matching the two slides.
-  - Added navigation buttons (`.slider-prev`, `.slider-next`) to match the hero slider’s functionality.
-  - Kept image `onerror` handlers for debugging.
-- **JavaScript**:
-  - Adapted the hero slider’s logic for `.story-slide` and `.slider-dots .dot`.
-  - Used opacity transitions for smooth fading.
-  - Included navigation buttons and hover-to-pause functionality.
-  - Added error handling for missing slides, buttons, or slider container.
-  - Set a 5-second interval to match the hero slider.
-
-#### Updated CSS (`css/style.css`)
-This CSS styles the grid layout and slider, ensuring the text is on the left, the slider on the right, and the heading centered at the top. It should be merged with the existing `style.css` (from artifact_version_id="aaa71a88-9661-42e4-85a5-9082d9848227"), replacing the `.about-story` and `.about-slideshow` sections.
-
-```css
 /* Our Story Section */
 .our-story {
     padding: var(--section-padding);
